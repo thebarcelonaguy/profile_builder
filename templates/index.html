@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+</head>
+<body>
+<div>
+    <h2>Predict whether IIMA call eligible or not </h2>
+
+    <form action="{{url_for('getprediction')}}" method="post">
+        <label for="10th_percentage">10th percentage:</label>
+        <input type="text" id="10th_percentage" name="10th_percentage"><br><br><br>
+        <label for="12th_stream">Choose a stream:</label>
+        <select name="12th_stream" id="12th_stream"><br>
+            <option value="Science">Science</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Arts">Arts</option>
+        </select><br><br><br>
+        <label for="12th_percentage">12th percentage:</label>
+        <input type="text" id="12th_percentage" name="12th_percentage"><br><br><br>
+        <label for="college_stream">college stream:</label>
+        <select name="college_stream" id="college_stream">
+            <option value="Medical">Medical</option>
+            <option value="CA">CA</option>
+            <option value="Arts">Arts</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Commerce">Commerce</option>
+            <option value="others">Others</option>
+        </select><br><br><br>
+        <label for="college_percentage">college percentage:</label>
+        <input type="text" id="college_percentage" name="college_percentage"><br><br><br>
+
+        <label for="work_experience">work experience:</label>
+        <input type="text" id="work_experience" name="work_experience"><br><br><br>
+
+        <button type="submit">getprediction</button>
+
+    </form>
+    <br>
+    {{output}}
+</div>
+</body>
+</html>
